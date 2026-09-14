@@ -1,4 +1,15 @@
 {
   "version": 2,
-  "outputDirectory": "dist"
+  "builds": [
+    {
+      "src": "dist/recognize.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/recognize.js"
+    }
+  ]
 }
